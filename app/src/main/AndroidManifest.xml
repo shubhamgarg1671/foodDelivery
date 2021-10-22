@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.paramhans.ecommercesingle">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.paramhans.ecommercesingle.Activities.HelpCenterActivity"></activity>
+        <activity android:name="com.paramhans.ecommercesingle.Activities.FaqsActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.AboutUsActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.paramhans.ecommercesingle.Activities.EditProfileActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.RatecardActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.OrderDetailsActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.SearchActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.PaymentActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.CoupounActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.CheckOutActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.SubCategoryActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.LocationSearchActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.CategoryActivity" />
+        <activity
+            android:name="com.paramhans.ecommercesingle.Activities.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.paramhans.ecommercesingle.Activities.HomeActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.MainActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.AddressActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.LocationActivity" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.EditAddress" />
+        <activity android:name="com.paramhans.ecommercesingle.Activities.MapsActivity" />
+        <activity
+            android:name="com.paramhans.ecommercesingle.Activities.RegistrationDetailsFillupActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.paramhans.ecommercesingle.Activities.EnterOTPActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".Activities.ProductDetailsActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="@string/RazorPay_key" />
+        <service
+            android:name="com.paramhans.ecommercesingle.FCM.SingleVendorMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

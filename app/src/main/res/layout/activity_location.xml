@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea"
+    tools:context=".Activities.LocationActivity">
+
+    <LinearLayout
+        android:id="@+id/lin_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/add_relative"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:minHeight="55dp">
+
+            <ImageView
+                android:id="@+id/addrs_backicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/ic_keyboard_backspace_black_24dp"
+                />
+
+            <com.paramhans.ecommercesingle.FontsUsed.RalewayExtraLight
+                android:id="@+id/addresslocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:gravity="start|center"
+                android:text="Search For Area,street name...."
+                android:maxLines="2"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/gray" />
+        <com.paramhans.ecommercesingle.FontsUsed.RalewayExtraLight
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="eg. Indore,sector 8"
+            android:textColor="@color/gray"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/white">
+
+            <com.paramhans.ecommercesingle.FontsUsed.RalewayRegular
+                android:id="@+id/tv_current_loaction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:drawableLeft="@drawable/location_pin"
+                android:drawableTint="@android:color/holo_blue_dark"
+                android:drawablePadding="16dp"
+                android:text="Use Your Current Location"
+                android:textColor="@android:color/holo_blue_dark" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/img_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/location_pin"
+                android:tint="@color/black"
+                />
+
+            <com.paramhans.ecommercesingle.FontsUsed.RalewayLight
+                android:id="@+id/txt_currentlocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/img_gps"
+                android:background="@android:color/transparent"
+                android:text="Current Location"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+
+            <com.paramhans.ecommercesingle.FontsUsed.RalewayExtraLight
+                android:id="@+id/tv_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_currentlocation"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/img_gps"
+                android:text="Using GPS"
+                android:textSize="10dp" />
+
+            <com.paramhans.ecommercesingle.FontsUsed.RalewayRegular
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_gps"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@+id/img_gps"
+                android:text=""
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_no_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <com.paramhans.ecommercesingle.FontsUsed.RalewayRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center_horizontal"
+            android:text="We currently do not serve in this locality.Please change locality.We hope that we will be available there shortly :)"/>
+
+        <com.paramhans.ecommercesingle.FontsUsed.RaleWayBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="We are available in Indore right now.Please search a location in Indore."/>
+    </LinearLayout>
+
+</RelativeLayout>

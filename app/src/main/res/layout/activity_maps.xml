@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rel_maps"
+    tools:context=".Activities.MapsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomlay">
+
+        <fragment
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/pick_marker"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/green_pin"/>
+
+        <ImageView
+            android:id="@+id/drop_marker"
+            android:layout_width="44dp"
+            android:layout_height="85dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:src="@drawable/red_pin"/>
+
+        <ImageView
+            android:id="@+id/myLocationCustomButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/circle"
+            android:padding="5dp"
+            android:alpha="0.7"
+            android:visibility="gone"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/locclicked"/>
+        <ImageView
+            android:id="@+id/myLocationCustomButtonclicked"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:visibility="gone"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/locclicked"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="15dp"
+        android:background="@color/white">
+
+        <com.paramhans.ecommercesingle.FontsUsed.RalewayRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set delivery location"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+
+        <com.paramhans.ecommercesingle.FontsUsed.RalewayLight
+            android:id="@+id/addresslocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:maxLines="2"
+            android:hint="Search For Area,street name...."
+            android:gravity="start|center"
+            android:layout_toRightOf="@+id/addrs_backicon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:textSize="12sp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"/>
+
+        <com.paramhans.ecommercesingle.CustomViews.CustomEditText
+            android:id="@+id/locality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:hint="Locality-How to reach(Optional)"
+            android:paddingLeft="8dp"/>
+        <com.paramhans.ecommercesingle.FontsUsed.RalewayLight
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE ADDRESS AS"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="10dp">
+            <com.paramhans.ecommercesingle.FontsUsed.RalewayLight
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="11sp"
+                android:padding="8dp"
+                android:background="@drawable/btn_simple_bg"
+                android:textColor="@color/black"/>
+
+            <com.paramhans.ecommercesingle.FontsUsed.RalewayLight
+                android:id="@+id/tv_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Work"
+                android:textSize="11sp"
+                android:padding="8dp"
+                android:background="@drawable/type_bg"
+                android:textColor="@color/gray"
+                android:layout_marginLeft="16dp"/>
+        </LinearLayout>
+
+
+        <com.paramhans.ecommercesingle.CustomViews.CustomButton
+            android:id="@+id/addressproceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:text="Confirm Location"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+

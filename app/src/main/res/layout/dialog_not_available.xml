@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lin_bg"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.paramhans.ecommercesingle.FontsUsed.RaleWayBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We don't provide service in your area currently"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.paramhans.ecommercesingle.FontsUsed.RalewayRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="We will be available and will start serving you soon."
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <com.paramhans.ecommercesingle.FontsUsed.RaleWayBold
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="OK,GOT IT"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

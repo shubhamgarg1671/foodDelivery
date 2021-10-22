@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp">
+
+    <com.paramhans.ecommercesingle.FontsUsed.RalewayExtraBold
+        android:id="@+id/tv_qty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/plus_minus_box"
+        android:text="1"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <com.paramhans.ecommercesingle.FontsUsed.RaleWayBold
+        android:id="@+id/tv_name_with_attribute"
+        android:layout_toRightOf="@+id/tv_qty"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="  X 1Kg Tomato"/>
+
+    <com.paramhans.ecommercesingle.FontsUsed.RaleWayBold
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs. 35"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/black"
+        android:layout_gravity="right"/>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "74633573178",
+    "firebase_url": "https://single-vendor-c5d9d.firebaseio.com",
+    "project_id": "single-vendor-c5d9d",
+    "storage_bucket": "single-vendor-c5d9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74633573178:android:ed28d7d75098a45d5ad603",
+        "android_client_info": {
+          "package_name": "com.paramhans.ecommercesingle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74633573178-dmcsv7eou68epd3dbqhqscff216rbjj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAknLzfbC7E8liO_yH6xUKEQvDrSmr4f08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74633573178-dmcsv7eou68epd3dbqhqscff216rbjj8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

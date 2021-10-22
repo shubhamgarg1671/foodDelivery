@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:id="@+id/rel_main_address"
+    android:focusableInTouchMode="true"
+    tools:context=".Activities.AddressActivity">
+
+    <RelativeLayout
+        android:id="@+id/add_relative"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:minHeight="45dp">
+        <ImageView
+            android:id="@+id/addrs_backicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_backspace_black_24dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            />
+        <com.paramhans.ecommercesingle.FontsUsed.RalewayRegular
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="MANAGE ADDRESS"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+
+            />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="#ededed"
+        android:layout_below="@+id/add_relative"/>
+
+    <com.paramhans.ecommercesingle.FontsUsed.RaleWayBold
+        android:id="@+id/saved_add"
+        android:layout_below="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="SAVED ADDRESSES"
+        android:gravity="start|center"
+        android:paddingLeft="10dp"
+        android:visibility="gone"
+        android:textSize="12sp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_address"
+        android:layout_below="@+id/saved_add"
+        android:layout_above="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.paramhans.ecommercesingle.FontsUsed.RaleWayBold
+        android:id="@+id/no_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No address found.Please add one."
+        android:layout_centerInParent="true"
+        android:layout_margin="40dp"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:background="@drawable/lin_bg"
+        android:elevation="4dp"
+        android:orientation="horizontal">
+
+        <com.paramhans.ecommercesingle.CustomViews.CustomButton
+            android:id="@+id/add_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:layout_weight="1"
+            android:text="add new  Address"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            />
+        <com.paramhans.ecommercesingle.CustomViews.CustomButton
+            android:id="@+id/add_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:text="proceed"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
